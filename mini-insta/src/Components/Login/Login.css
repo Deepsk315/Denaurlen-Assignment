@@ -1,0 +1,27 @@
+.Title {
+  /* font-family: Roboto; */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.form-submit-button {
+  position: absolute;
+  width: 94%;
+  height: 44px;
+
+  background: #4b0082;
+  border-radius: 5px;
+
+  /* font-family: Roboto; */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}

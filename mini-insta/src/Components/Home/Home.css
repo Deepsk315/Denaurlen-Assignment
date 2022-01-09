@@ -1,0 +1,44 @@
+.leadBtn {
+  width: 126px;
+  height: 40px;
+
+  background: #4b0082;
+  border-radius: 5px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+.textLight {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #968c9d;
+
+  opacity: 0.8;
+}
+.textLightBold {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #968c9d;
+
+  opacity: 0.8;
+}
+.highlightBox {
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  background: #ece6f0;
+  border-radius: 2.80499px;
+}
