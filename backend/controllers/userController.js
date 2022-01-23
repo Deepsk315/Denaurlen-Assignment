@@ -32,13 +32,13 @@ const loginUser = catchAsyncErrors(async (req, res, next) => {
 });
 
 const coinsUpdate = catchAsyncErrors(async (req, res) => {
+  console.log("req.body: ", req.body);
   const newLeadCoins = {
-    leadCoins: Number(req.body.coins),
+    leadCoins: Number(req.body.leadcoins),
     netcoins: Number(req.user.netcoins),
     user: req.user.id,
     grosscoins: req.user.grosscoins,
   };
-
   newLeadCoins.leadCoins = newLeadCoins.netcoins;
   newLeadCoins.netcoins += 100;
   newLeadCoins.grosscoins += newLeadCoins.netcoins;
@@ -49,6 +49,7 @@ const coinsUpdate = catchAsyncErrors(async (req, res) => {
     runValidators: true,
     useFindAndModify: false,
   });
+  console.log("user:", user);
 
   if (!user) {
     return next(new ErrorHandler("No user found", 400));

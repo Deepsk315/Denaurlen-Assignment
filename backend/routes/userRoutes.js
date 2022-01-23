@@ -11,7 +11,7 @@ const router = express.Router();
 
 router.route("/register").post(registerUser);
 router.route("/login").post(loginUser);
-router.route("/user/:coins").post(isAuthenticatedUser, coinsUpdate);
+router.route("/user/postid").post(isAuthenticatedUser, coinsUpdate);
 router.route("/logout").get(logoutUser);
 
 module.exports = router;
