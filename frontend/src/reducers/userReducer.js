@@ -44,7 +44,7 @@ export const userCoinUpdateReducer = (state = {}, action) => {
     case USER_UPDATE_COINS_REQUEST:
       return { loading: true };
     case USER_UPDATE_COINS_SUCCESS:
-      return { loading: false, success: true };
+      return { loading: false, userInfo:action.payload,success: true };
     case USER_UPDATE_COINS_FAIL:
       return { loading: false, error: action.payload, success: false };
     default:

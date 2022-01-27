@@ -80,7 +80,6 @@ export const register = (name, username) => async (dispatch) => {
 
 export const coinUpadte = (leadcoins) => async (dispatch, getState) => {
   try {
-    debugger;
     dispatch({
       type: USER_UPDATE_COINS_REQUEST,
     });
@@ -92,13 +91,16 @@ export const coinUpadte = (leadcoins) => async (dispatch, getState) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        Authorization: `token=${userInfo.token}`,
+        Authorization: `${userInfo.token}`,
       },
     };
 
+    let d = {
+      leadcoins: leadcoins,
+    };
     const { data } = await axios.post(
       `http://localhost:4000/api/v1/user/postid`,
-      { leadcoins },
+      d,
       config
     );
     console.log(data);

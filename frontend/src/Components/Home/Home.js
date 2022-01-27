@@ -19,28 +19,20 @@ const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [leadCoins, setLeadCoins] = useState(0);
-  const [netCoins, setNetCoins] = useState(0);
-  const [grossCoins, setGrossCoins] = useState(0);
-
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
   console.log(userInfo);
 
   const updateHandler = (leadcoins) => {
-    debugger
     dispatch(coinUpadte(leadcoins));
-    navigate("/home");
+    navigate("/login");
   };
 
   const logoutHandler = () => {
     dispatch(logoutUser());
     navigate("/login");
   };
-
-  // const userCoinUpdate = useSelector((state) => state.userCoinUpdate);
-  // const { success: successUpdate } = userCoinUpdate;
 
   return (
     <div>
@@ -109,7 +101,6 @@ const Home = () => {
                 updateHandler(100);
               }}
             >
-              {/* {"Lead +100 "}{" "} */}
               Lead+100
               <img src={currency} alt="currency" className="pl-1" />{" "}
             </button>
@@ -130,7 +121,7 @@ const Home = () => {
                 <img src={coin} alt="coin" />
               </div>
               <div className="col-2">
-                <p>1100</p>
+                <p>{userInfo.user.netcoins}</p>
               </div>
               <div className="col-2">
                 <img src={vector} alt="vector" />
